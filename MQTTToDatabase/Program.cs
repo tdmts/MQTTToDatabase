@@ -35,11 +35,12 @@ namespace MQTTToDatabase
                     {
                         client = new MqttClient("test.mosquitto.org"); //Of je kan hier ook jouw eigen broker gebruiken uit vorig labo.
                         client.MqttMsgPublishReceived += Client_MqttMsgPublishReceived;
-                        client.Connect(new Guid().ToString());
-                        
+                        client.ConnectionClosed += Client_ConnectionClosed;
+                        client.Connect("Receiver");
+                        Thread.Sleep(1000);
                         if (client.IsConnected)
                         {
-                            client.Subscribe(new string[] { "hogent/elm/test" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
+                            client.Subscribe(new string[] { "hogent/jouwVoornaamEnNaam/SensorMeasurement" }, new byte[] { MqttMsgBase.QOS_LEVEL_EXACTLY_ONCE });
                         }
                     }
                 }
@@ -51,6 +52,11 @@ namespace MQTTToDatabase
             }
             
 
+        }
+
+        private void Client_ConnectionClosed(object sender, EventArgs e)
+        {
+            client = null;
         }
 
         private void Client_MqttMsgPublishReceived(object sender, MqttMsgPublishEventArgs e)
