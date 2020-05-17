@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MQTTToDatabase", "MQTTToDatabase\MQTTToDatabase.csproj", "{EEFF10DF-5DFB-4714-B6AA-495605C734EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEFF10DF-5DFB-4714-B6AA-495605C734EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFF10DF-5DFB-4714-B6AA-495605C734EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFF10DF-5DFB-4714-B6AA-495605C734EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFF10DF-5DFB-4714-B6AA-495605C734EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B840FB3-3B3A-4C68-A651-051F70ECCA81}
+	EndGlobalSection
+EndGlobal
